@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Photography Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #101010;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      padding: 25px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #292929;
+    }
+
+    .logo {
+      font-size: 20px;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 13px;
+    }
+
+    nav a:hover {
+      color: #c8a77b;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px 75px;
+    }
+
+    .hero p {
+      color: #c8a77b;
+      letter-spacing: 4px;
+      font-size: 11px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(38px, 8vw, 72px);
+      font-weight: normal;
+      margin-bottom: 18px;
+    }
+
+    .hero .intro {
+      color: #aaa;
+      font-size: 14px;
+      letter-spacing: 1px;
+      line-height: 1.8;
+    }
+
+    .gallery-section {
+      padding: 30px 8% 80px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+      font-family: Georgia, serif;
+      font-size: 30px;
+      font-weight: normal;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .photo {
+      overflow: hidden;
+      background: #202020;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s;
+    }
+
+    .photo:hover img {
+      transform: scale(1.05);
+    }
+
+    .caption {
+      padding: 13px;
+      color: #ccc;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .about {
+      text-align: center;
+      padding: 65px 20px;
+      background: #181818;
+    }
+
+    .about h2 {
+      font: normal 32px Georgia, serif;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      color: #aaa;
+      max-width: 550px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 30px 15px;
+      text-align: center;
+      color: #888;
+      font-size: 12px;
+      line-height: 2;
+    }
+
+    footer a {
+      color: #c8a77b;
+      text-decoration: none;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .hero {
+        padding: 75px 15px 55px;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .photo img {
+        height: 210px;
+      }
+
+      .gallery-section {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .photo img {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">YOUR NAME.</div>
+    <nav>
+      <a href="#home">HOME</a>
+      <a href="#gallery">GALLERY</a>
+      <a href="#about">ABOUT</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <p>WELCOME TO MY WORLD</p>
+    <h1>Through My Lens</h1>
+    <div class="intro">
+      Capturing moments, emotions, and stories<br>
+      one photograph at a time.
+    </div>
+  </section>
+
+  <section class="gallery-section" id="gallery">
+    <h2 class="section-title">My Photography</h2>
+
+    <div class="gallery">
+      <div class="photo">
+        <img src="images/photo1.jpg" alt="Photography 1">
+        <div class="caption">01 — Moments</div>
+      </div>
+
+      <div class="photo">
+        <img src="images/photo2.jpg" alt="Photography 2">
+        <div class="caption">02 — Nature</div>
+      </div>
+
+      <div class="photo">
+        <img src="images/photo3.jpg" alt="Photography 3">
+        <div class="caption">03 — Memories</div>
+      </div>
+
+      <div class="photo">
+        <img src="images/photo4.jpg" alt="Photography 4">
+        <div class="caption">04 — Places</div>
+      </div>
+
+      <div class="photo">
+        <img src="images/photo5.jpg" alt="Photography 5">
+        <div class="caption">05 — Details</div>
+      </div>
+
+      <div class="photo">
+        <img src="images/photo6.jpg" alt="Photography 6">
+        <div class="caption">06 — Life</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>Behind the Lens</h2>
+    <p>
+      Hello! I'm a photographer who loves capturing
+      beautiful moments and finding stories in the
+      little things. This is a collection of the
+      photographs that mean something to me.
+    </p>
+  </section>
+
+  <footer id="contact">
+    <p>LET'S CONNECT</p>
+    <p>
+      <a href="https://instagram.com/">Instagram</a>
+    </p>
+    <p>© 2026 YOUR NAME. All rights reserved.</p>
+  </footer>
+
+</body>
+  </html>
+  
